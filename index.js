@@ -3,6 +3,40 @@ const song = document.getElementById("song");
 const ctrlIcons = document.getElementById("ctrlIcon");
 const ctrlDiv = document.querySelector(".control-div");
 
+//songs list
+const songs = [
+    {
+        name : "media/Ed-Sheeran-Galway-Girl.mp3",
+        artist: "Ed Sheeran",
+        title: "Galway Girl",
+        img: "media/images.jpeg"
+    },
+    {
+        name : "media/One-Direction-What-Makes-You-Beautiful.mp3",
+        artist: "One Direction",
+        title: "What Makes You Beautiful",
+        img: "media/What_Makes_You_Beautiful_Album_Cover.jpg"
+    },
+    {
+        name : "media/Love-Me-Like-You-Do(PaglaSongs).mp3",
+        artist: "Ellie Goulding",
+        title: "Love Me Like You Do",
+        img: "media/lovemelikeyoudo.jpeg"
+    },
+    {
+        name : "media/Bhulado_Raeth.mp3",
+        artist: "Raeth",
+        title: "Bhula Do",
+        img: "media/bhulado.jpg"
+    },
+    {
+        name : "media/Aaoge_Tum_Kabhi.mp3",
+        artist: "The Local Train",
+        title: "Aaoge Tum Kabhi",
+        img: "media/TLT.jpeg"
+    }
+]
+
 song.onloadedmetadata = function(){
     slider.max = song.duration;
     slider.value = song.currentTime;
