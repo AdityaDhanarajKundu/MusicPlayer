@@ -23,3 +23,11 @@ function playPause(){
         ctrlIcons.classList.remove("fa-play");
     }
 }
+
+//function to move the slider thumb
+if(song.play()){
+    setInterval(()=>{
+        slider.value = song.currentTime;
+    },500);
+}
+
