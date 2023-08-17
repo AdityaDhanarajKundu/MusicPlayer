@@ -31,3 +31,10 @@ if(song.play()){
     },500);
 }
 
+//function to play the song from a particular position by moving the slider
+slider.onchange = function(){
+    song.play();
+    song.currentTime = slider.value;
+    ctrlIcons.classList.add("fa-pause");
+    ctrlIcons.classList.remove("fa-play");
+}
