@@ -1,0 +1,25 @@
+const slider = document.getElementById("progress");
+const song = document.getElementById("song");
+const ctrlIcons = document.getElementById("ctrlIcon");
+const ctrlDiv = document.querySelector(".control-div");
+
+song.onloadedmetadata = function(){
+    slider.max = song.duration;
+    slider.value = song.currentTime;
+}
+
+ctrlIcons.addEventListener("click",playPause);
+ctrlDiv.addEventListener("click",playPause);
+
+function playPause(){
+    if(ctrlIcons.classList.contains("fa-pause")){
+        song.pause();
+        ctrlIcons.classList.remove("fa-pause");
+        ctrlIcons.classList.add("fa-play");
+    }
+    else{
+        song.play();
+        ctrlIcons.classList.add("fa-pause");
+        ctrlIcons.classList.remove("fa-play");
+    }
+}
