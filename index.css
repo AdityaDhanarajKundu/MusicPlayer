@@ -58,6 +58,7 @@ nav .circle{
 .music-player p{
     font-size: 18px;
     color: #333;  
+    padding-top: 15px;
 }
 
 #progress{
