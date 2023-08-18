@@ -53,8 +53,12 @@ function nextSong(){
 next.addEventListener("click",nextSong);
 
 function prevSong(){
-
+    songIndex = (songIndex-1 + songs.length)%songs.length;
+    loadSongs(songs[songIndex]);
+    song.play();
 }
+
+prev.addEventListener("click",prevSong);
 
 //function to load the songs and display
 function loadSongs(songs){
