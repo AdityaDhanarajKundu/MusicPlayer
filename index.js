@@ -8,6 +8,8 @@ const songImg = document.querySelector(".song-img");
 const prev = document.querySelector(".prev");
 const next = document.querySelector(".next");
 const back = document.querySelector(".circle");
+const listEl = document.getElementById("list");
+const queueEl = document.querySelector(".queue");
 
 //songs list
 const songs = [
@@ -43,8 +45,20 @@ const songs = [
     }
 ];
 
+//function to show the list of the songs
+listEl.addEventListener("click",()=>{
+    queueEl.style.display = "flex";
+    console.log("button clicked");
+});
+
+//function to close 
 back.addEventListener("click",()=>{
-    window.close();
+    if(queueEl.style.display === "flex"){
+        queueEl.style.display = "none";
+    }
+    else{
+        window.close();
+    }
 });
 
 let songIndex = 0;
