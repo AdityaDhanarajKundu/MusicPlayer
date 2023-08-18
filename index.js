@@ -7,6 +7,7 @@ const artistEl = document.getElementById("artist");
 const songImg = document.querySelector(".song-img");
 const prev = document.querySelector(".prev");
 const next = document.querySelector(".next");
+const back = document.querySelector(".circle");
 
 //songs list
 const songs = [
@@ -41,6 +42,10 @@ const songs = [
         img: "media/TLT.jpeg"
     }
 ];
+
+back.addEventListener("click",()=>{
+    window.close();
+});
 
 let songIndex = 0;
 //function to load and play the next and the previous songs
