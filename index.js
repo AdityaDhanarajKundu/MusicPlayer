@@ -2,6 +2,9 @@ const slider = document.getElementById("progress");
 const song = document.getElementById("song");
 const ctrlIcons = document.getElementById("ctrlIcon");
 const ctrlDiv = document.querySelector(".control-div");
+const titleEl = document.getElementById("title");
+const artistEl = document.getElementById("artist");
+const songImg = document.querySelector(".song-img");
 
 //songs list
 const songs = [
@@ -36,6 +39,14 @@ const songs = [
         img: "media/TLT.jpeg"
     }
 ]
+
+//function to load the songs and display
+function loadSongs(songs){
+    titleEl.textContent = songs.title;
+    artistEl.textContent = songs.artist;
+    song.src = songs.name;
+    songImg.src = songs.img;
+}
 
 song.onloadedmetadata = function(){
     slider.max = song.duration;
