@@ -40,7 +40,21 @@ const songs = [
         title: "Aaoge Tum Kabhi",
         img: "media/TLT.jpeg"
     }
-]
+];
+
+let songIndex = 0;
+//function to load and play the next and the previous songs
+function nextSong(){
+    songIndex = (songIndex+1)%songs.length;
+    loadSongs(songs[songIndex]);
+    song.play();
+}
+
+next.addEventListener("click",nextSong);
+
+function prevSong(){
+
+}
 
 //function to load the songs and display
 function loadSongs(songs){
@@ -49,7 +63,7 @@ function loadSongs(songs){
     song.src = songs.name;
     songImg.src = songs.img;
 }
-loadSongs(songs[2]);
+loadSongs(songs[0]);
 
 song.onloadedmetadata = function(){
     slider.max = song.duration;
