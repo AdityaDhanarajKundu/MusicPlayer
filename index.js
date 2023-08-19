@@ -10,6 +10,7 @@ const next = document.querySelector(".next");
 const back = document.querySelector(".circle");
 const listEl = document.getElementById("list");
 const queueEl = document.querySelector(".queue");
+const volumeEl = document.getElementById("volume");
 
 //songs list
 const songs = [
@@ -44,6 +45,13 @@ const songs = [
         img: "media/TLT.jpeg"
     }
 ];
+
+//volume control
+
+song.volume = volumeEl.value/100; //initial volume
+volumeEl.addEventListener("input",()=>{
+    song.volume = volumeEl.value/100;
+})
 
 //function to show the list of the songs
 listEl.addEventListener("click",()=>{
