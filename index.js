@@ -72,42 +72,27 @@ back.addEventListener("click",()=>{
 //function to select song from the list 
 queueEl.addEventListener("click",(e)=>{
     if(e.target.id === "galway"){
-        titleEl.textContent = songs[0].title;
-        artistEl.textContent = songs[0].artist;
-        song.src = songs[0].name;
-        songImg.src = songs[0].img;
+        loadSongs(songs[0]);
         queueEl.style.display = "none";
         song.play();
     }
     else if(e.target.id === "oneD"){
-        titleEl.textContent = songs[1].title;
-        artistEl.textContent = songs[1].artist;
-        song.src = songs[1].name;
-        songImg.src = songs[1].img;
+        loadSongs(songs[1]);
         queueEl.style.display = "none";
         song.play();
     }
     else if(e.target.id === "love"){
-        titleEl.textContent = songs[2].title;
-        artistEl.textContent = songs[2].artist;
-        song.src = songs[2].name;
-        songImg.src = songs[2].img;
+        loadSongs(songs[2]);
         queueEl.style.display = "none";
         song.play();
     }
     else if(e.target.id === "bhulado"){
-        titleEl.textContent = songs[3].title;
-        artistEl.textContent = songs[3].artist;
-        song.src = songs[3].name;
-        songImg.src = songs[3].img;
+        loadSongs(songs[3]);
         queueEl.style.display = "none";
         song.play();
     }
     else if(e.target.id === "local"){
-        titleEl.textContent = songs[4].title;
-        artistEl.textContent = songs[4].artist;
-        song.src = songs[4].name;
-        songImg.src = songs[4].img;
+        loadSongs(songs[4]);
         queueEl.style.display = "none";
         song.play();
     }
