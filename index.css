@@ -61,9 +61,42 @@ nav .circle{
     padding-top: 15px;
 }
 
+.player{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 0;
+    position: relative;
+}
+
+#volume{
+    -webkit-appearance: none;
+    height: 6px;
+    transform: rotate(-90deg);
+    width: 100px;
+    position: absolute;
+    right: -15%;
+    background-color: #f53192;
+    border-radius: 4px;
+
+}
+
+#volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #f53192;
+    width: 15px; /* Adjust thumb width */
+    height: 15px; /* Adjust thumb height */
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+    margin-top: -2px; /* Adjust thumb position */
+}
+
 #progress{
     -webkit-appearance: none;   /* hiding the default slider */
-    width: 100%;
+    width: 90%;
     height: 6px;
     background: #f53192;
     border-radius: 4px;
